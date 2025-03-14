@@ -241,7 +241,7 @@ class Configuration(Mapping[str, Any]):
 
     def __eq__(self, other: Any) -> bool:
         if isinstance(other, self.__class__):
-            return dict(self) == dict(other) and self.config_space == other.config_space
+            return dict(self) == dict(other)
         return NotImplemented
 
     def __hash__(self) -> int:
